@@ -56,7 +56,7 @@ def chapter_title_short(full: str) -> str:
 def build_segments(manifest: dict, gdoc: dict) -> list[dict]:
     """Each segment: text (with trailing newline), kind, url optional."""
     segs: list[dict] = []
-    segs.append({"text": "Governed Recursive Self-Improvement\n", "kind": "title"})
+    segs.append({"text": "Recursive Self-Improvement for AI Agents\n", "kind": "title"})
     segs.append({"text": f"{manifest['subtitle']}\n", "kind": "subtitle"})
     segs.append({"text": f"Author: {manifest['author']}\nPublisher: {manifest['publisher']}\n\n", "kind": "body"})
     segs.append({"text": "Master table of contents\n", "kind": "h1"})

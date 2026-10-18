@@ -1,6 +1,6 @@
 """
 Update Product Information (PI) Google Doc for:
-Governed Recursive Self-Improvement: Bounded Self-Evolution of Agent Harnesses
+Recursive Self-Improvement for AI Agents: Bounded Self-Evolution of Agent Harnesses
 
 Document ID: 1M29Em3yqS7fO-f3qxKZvEEYW7bQuab21UDeXPO-wa-E
 """
@@ -22,7 +22,7 @@ PACKT_ORANGE_FG = {
 SECTIONS = [
     {
         "header": "Title (50 chars with spaces)",
-        "content": "Governed Recursive Self-Improvement",
+        "content": "Recursive Self-Improvement for AI Agents",
     },
     {
         "header": "Subtitle (100 chars with spaces)",
@@ -48,7 +48,7 @@ SECTIONS = [
     {
         "header": "Long Description (1350 chars with spaces)",
         "paragraphs": [
-            "Recursive self-improvement (RSI) allows AI agents to optimize their prompts, code, memory, and model weights over time. Without explicit boundaries, runtime modifications introduce failure modes such as reward hacking, catastrophic forgetting, and behavioral drift. Governed Recursive Self-Improvement delivers an engineering framework for secure, governed, and verified RSI. You will construct architectures where candidate mutations across prompts, algorithms, weights, and orchestration are proposed, isolated in sandboxes, empirically evaluated, and verified before promotion.",
+            "Recursive self-improvement (RSI) allows AI agents to optimize their prompts, code, memory, and model weights over time. Without explicit boundaries, runtime modifications introduce failure modes such as reward hacking, catastrophic forgetting, and behavioral drift. Recursive Self-Improvement for AI Agents delivers an engineering framework for secure, governed, and verified RSI. You will construct architectures where candidate mutations across prompts, algorithms, weights, and orchestration are proposed, isolated in sandboxes, empirically evaluated, and verified before promotion.",
             "Written by Ken Huang, Adjunct Professor at the University of San Francisco and creator of the CSA MAESTRO framework, this book features five runnable lab implementations. You will build evolutionary algorithm search, LoRA model adaptation with anti-forgetting gates, token-efficient memory curation, and AST-level harness hot-reloading. To ensure secure and governed RSI, you will deploy isolated container sandboxes, cryptographic evaluation ledgers, and HMAC-signed promotion tokens.",
             "By the end of this book, you will have the architecture and code to build AI agents with secure, governed, and verified recursive self-improvement across algorithms, models, and orchestration.",
         ],
@@ -82,11 +82,11 @@ SECTIONS = [
 
 def build_document_text_and_styles():
     """Build full plain text and calculate ranges for headers and content."""
-    full_text = "Product Information — Governed Recursive Self-Improvement\n\n"
+    full_text = "Product Information — Recursive Self-Improvement for AI Agents\n\n"
     styles = []  # list of (start, end, style_dict)
 
     # Document Title style
-    doc_title_text = "Product Information — Governed Recursive Self-Improvement\n"
+    doc_title_text = "Product Information — Recursive Self-Improvement for AI Agents\n"
     styles.append({
         "start": 1,
         "end": 1 + len(doc_title_text),

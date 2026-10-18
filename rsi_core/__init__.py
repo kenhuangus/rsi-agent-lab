@@ -1,4 +1,4 @@
-"""Core types and helpers for Governed Recursive Self-Improvement labs."""
+"""Core types and helpers for Recursive Self-Improvement for AI Agents labs."""
 
 from rsi_core.types import LineageId, LockedPathError, Surface
 

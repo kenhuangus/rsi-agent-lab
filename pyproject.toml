@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "grsi-lab"
 version = "0.2.0"
-description = "Companion labs for Governed Recursive Self-Improvement (Packt)"
+description = "Companion labs for Recursive Self-Improvement for AI Agents (Packt)"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }

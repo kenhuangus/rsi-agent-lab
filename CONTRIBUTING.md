@@ -1,6 +1,6 @@
 # Contributing to grsi-lab
 
-This repository is the companion lab for the Packt book **Governed Recursive Self-Improvement**.
+This repository is the companion lab for the Packt book **Recursive Self-Improvement for AI Agents**.
 
 ## Contracts lock
 

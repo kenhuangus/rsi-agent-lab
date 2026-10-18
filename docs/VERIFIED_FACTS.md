@@ -1,6 +1,6 @@
 # VERIFIED_FACTS.md
 
-Grounded quantitative claims for *Governed Recursive Self-Improvement* (Packt).
+Grounded quantitative claims for *Recursive Self-Improvement for AI Agents* (Packt).
 
 **Rule:** No number appears in chapter prose unless it has a row here with `claim_status` and a primary `url`.
 **Packt citation:** Put the URL inline once at first mention in that chapter; later mentions back-reference without repeating the URL. No References section.
