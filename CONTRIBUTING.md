@@ -1,4 +1,4 @@
-# Contributing to grsi-lab
+# Contributing to rsi-agent-lab
 
 This repository is the companion lab for the Packt book **Recursive Self-Improvement for AI Agents**.
 
