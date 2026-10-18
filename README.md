@@ -1,6 +1,6 @@
-# Governed Recursive Self-Improvement — Lab Companion
+# Recursive Self-Improvement for AI Agents — Lab Companion
 
-Companion repository for the Packt book **Governed Recursive Self-Improvement**. Labs implement the locked interfaces in [`CONTRACTS.md`](CONTRACTS.md): ownership manifests, candidate diffs, sandboxes, sealed evaluation decisions, and promotion tokens.
+Companion repository for the Packt book **ecursive Self-Improvement for AI Agents**. Labs implement the locked interfaces in [`CONTRACTS.md`](CONTRACTS.md): ownership manifests, candidate diffs, sandboxes, sealed evaluation decisions, and promotion tokens.
 
 **Chapter manuscripts are Google Docs only** — they are not stored in this repo. Doc format matches the Packt template (Crimson Pro / Jost / Consolas); see [`docs/PACKT_FORMAT.md`](docs/PACKT_FORMAT.md). Chapter links: [`docs/GDOC_IDS.json`](docs/GDOC_IDS.json).
 
