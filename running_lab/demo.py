@@ -70,9 +70,9 @@ def run_lab(*, verbose: bool = True, work_dir: Path | None = None) -> dict[str, 
     """Exercise propose → sandbox jail → metric eval → blocked/signed promote → kill."""
     reset_registry()
     steps: list[dict[str, Any]] = []
-    base = Path(work_dir) if work_dir else Path(tempfile.mkdtemp(prefix="grsi-lab-run-"))
+    base = Path(work_dir) if work_dir else Path(tempfile.mkdtemp(prefix="rsi-lab-run-"))
     base.mkdir(parents=True, exist_ok=True)
-    store = DurableStore(base / "grsi.sqlite3")
+    store = DurableStore(base / "rsi.sqlite3")
     ledger = SealedLedger(store=store)
 
     proposal = build_proposal(
@@ -286,7 +286,7 @@ def run_dry_run(*, verbose: bool = True) -> dict[str, Any]:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="GRSI running lab (real local gates)")
+    parser = argparse.ArgumentParser(description="RSI running lab (real local gates)")
     parser.add_argument(
         "--dry-run",
         action="store_true",

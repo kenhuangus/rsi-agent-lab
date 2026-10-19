@@ -8,7 +8,7 @@ Sandbox profile enforcement with a filesystem jail, widening guards, an isolatio
 
 - Python 3.11+
 - From repo root: `pip install -e ".[dev]"`
-- Optional: `GRSI_ISOLATION_HMAC_KEY` (defaults to a labeled lab credential)
+- Optional: `RSI_ISOLATION_HMAC_KEY` (defaults to a labeled lab credential)
 
 ## How to run
 

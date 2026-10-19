@@ -20,13 +20,13 @@ def _canonical(obj: dict[str, Any]) -> bytes:
     return json.dumps(obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
 
 
-def load_signing_key(env_var: str = "GRSI_PROMOTION_HMAC_KEY") -> bytes:
+def load_signing_key(env_var: str = "RSI_PROMOTION_HMAC_KEY") -> bytes:
     """Load HMAC key from env (base64 or utf-8) or generate an ephemeral lab key.
 
-    Production deployments must set ``GRSI_PROMOTION_HMAC_KEY`` (32+ random bytes,
+    Production deployments must set ``RSI_PROMOTION_HMAC_KEY`` (32+ random bytes,
     base64). An ephemeral key is used only when unset so local labs remain runnable.
     """
-    raw = os.environ.get(env_var)
+    raw = os.environ.get(env_var) or os.environ.get("GRSI_PROMOTION_HMAC_KEY")
     if raw:
         try:
             key = base64.b64decode(raw, validate=True)
@@ -36,7 +36,7 @@ def load_signing_key(env_var: str = "GRSI_PROMOTION_HMAC_KEY") -> bytes:
             raise ValueError(f"{env_var} must decode to at least 32 bytes")
         return key
     # Deterministic lab fallback (documented); override in real deployments.
-    return hashlib.sha256(b"grsi-lab-dev-only-hmac-key-v1").digest()
+    return hashlib.sha256(b"rsi-lab-dev-only-hmac-key-v1").digest()
 
 
 def sign_payload(key: bytes, payload: dict[str, Any]) -> str:

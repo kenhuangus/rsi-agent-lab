@@ -1,1 +1,1 @@
-﻿"""Chapter-aligned GRSI lab packages (Ch2–Ch10)."""
+﻿"""Chapter-aligned RSI lab packages (Ch2–Ch10)."""

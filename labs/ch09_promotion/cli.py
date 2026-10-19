@@ -44,7 +44,7 @@ def _candidate(lineage: str) -> dict[str, Any]:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="GRSI Ch9 promotion lab CLI")
+    parser = argparse.ArgumentParser(description="RSI Ch9 promotion lab CLI")
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("refuse-no-token", help="Promote without token (must fail)")
     p_ok = sub.add_parser("promote", help="Seal keep + mint token + promote")

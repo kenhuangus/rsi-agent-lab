@@ -26,16 +26,16 @@
     "10": "https://docs.google.com/document/d/134L-dSBboKP-bPY_85i-pq7bQZfSTYrHLdigNeb1Fuc/edit?usp=drivesdk"
   },
   "titles": {
-    "toc": "RSI for AI Agents \u2014 Master TOC (Chapters 1\u201310)",
-    "1": "GRSI Ch01 \u2014 Survey of Recursive Self-Improvement Loops",
-    "2": "GRSI Ch02 \u2014 Ownership Contracts for Self-Improving Systems",
-    "3": "GRSI Ch03 \u2014 Proposing Self-Improvement Candidates",
-    "4": "GRSI Ch04 \u2014 Self-Improvement for Foundation Models",
-    "5": "GRSI Ch05 \u2014 Self-Improvement for Data and Memory",
-    "6": "GRSI Ch06 \u2014 Self-Improvement for Agent Orchestration",
-    "7": "GRSI Ch07 \u2014 Isolating Self-Improvement Experiments",
-    "8": "GRSI Ch08 \u2014 Verifying, Measuring, and Recording Self-Improvement",
-    "9": "GRSI Ch09 \u2014 Human Approval Before Production Promotion",
-    "10": "GRSI Ch10 \u2014 Ecosystem Boundaries, Audit, Kill, and Rollback"
+    "toc": "RSI for AI Agents — Master TOC (Chapters 1–10)",
+    "1": "RSI-Ch01 — Survey of Recursive Self-Improvement Loops",
+    "2": "RSI-Ch02 — Ownership Contracts for Self-Improving Systems",
+    "3": "RSI-Ch03 — Proposing Self-Improvement Candidates",
+    "4": "RSI-Ch04 — Self-Improvement for Foundation Models",
+    "5": "RSI-Ch05 — Self-Improvement for Data and Memory",
+    "6": "RSI-Ch06 — Self-Improvement for Agent Orchestration",
+    "7": "RSI-Ch07 — Isolating Self-Improvement Experiments",
+    "8": "RSI-Ch08 — Verifying, Measuring, and Recording Self-Improvement",
+    "9": "RSI-Ch09 — Human Approval Before Production Promotion",
+    "10": "RSI-Ch10 — Ecosystem Boundaries, Audit, Kill, and Rollback"
   }
 }

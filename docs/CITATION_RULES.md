@@ -1,4 +1,4 @@
-# Packt citation rules (GRSI)
+# Packt citation rules (RSI)
 
 Overrides the usual Google Doc “References section” habit for this title.
 

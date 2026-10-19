@@ -18,7 +18,7 @@ LINEAGE = "12345678-1234-4234-8234-123456789abc"
 
 
 def _cmd_run_clean(_: argparse.Namespace) -> int:
-    with tempfile.TemporaryDirectory(prefix="grsi-ch07-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="rsi-ch07-") as tmp:
         store = ReceiptStore(Path(tmp) / "receipts")
         result = run_isolated(
             {

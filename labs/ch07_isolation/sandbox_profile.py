@@ -53,7 +53,7 @@ def path_in_allowlist(path: str, profile: dict[str, Any]) -> bool:
 
 def create_filesystem_jail(base: str | Path | None = None) -> Path:
     """Create a real temporary jail directory with work/ subtree."""
-    root = Path(base) if base else Path(tempfile.mkdtemp(prefix="grsi-jail-"))
+    root = Path(base) if base else Path(tempfile.mkdtemp(prefix="rsi-jail-"))
     (root / "work").mkdir(parents=True, exist_ok=True)
     return root.resolve()
 

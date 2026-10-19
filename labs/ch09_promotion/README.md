@@ -9,7 +9,7 @@ Keep ≠ promote. A sealed keep enters production only with an HMAC-signed promo
 - Python 3.11+
 - `pip install -e ".[dev]"`
 - Chapter 8 sealed ledger types (`labs.ch08_measure`)
-- Optional: `GRSI_PROMOTION_HMAC_KEY` (base64, ≥32 bytes); lab uses a documented ephemeral key when unset
+- Optional: `RSI_PROMOTION_HMAC_KEY` (base64, ≥32 bytes); lab uses a documented ephemeral key when unset
 
 ## How to run
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild GRSI master TOC Google Doc with clickable links to all chapters."""
+"""Rebuild RSI master TOC Google Doc with clickable links to all chapters."""
 from __future__ import annotations
 
 import json
@@ -50,20 +50,34 @@ def clear_body(doc_id: str) -> None:
 
 
 def chapter_title_short(full: str) -> str:
-    return re.sub(r"^GRSI Ch\d+\s*[—\-]\s*", "", full).strip()
+    return re.sub(r"^(?:RSI\s+Ch|RSI-Ch|RSI\s+Ch)\d+\s*[—\-]\s*", "", full).strip()
 
 
 def build_segments(manifest: dict, gdoc: dict) -> list[dict]:
     """Each segment: text (with trailing newline), kind, url optional."""
     segs: list[dict] = []
-    segs.append({"text": "Recursive Self-Improvement for AI Agents\n", "kind": "title"})
+    title = manifest.get("title") or "Recursive Self-Improvement for AI Agents"
+    segs.append({"text": f"{title}\n", "kind": "title"})
     segs.append({"text": f"{manifest['subtitle']}\n", "kind": "subtitle"})
-    segs.append({"text": f"Author: {manifest['author']}\nPublisher: {manifest['publisher']}\n\n", "kind": "body"})
+    segs.append(
+        {
+            "text": (
+                f"Author: {manifest['author']}\n"
+                f"Publisher: {manifest['publisher']}\n"
+                "Packt project code: B43540\n"
+                f"Page budget (book): {manifest.get('page_budget_total', 330)} pages\n\n"
+            ),
+            "kind": "body",
+        }
+    )
     segs.append({"text": "Master table of contents\n", "kind": "h1"})
     segs.append(
         {
-            "text": "Use this document as the master index. Open any chapter from the links below. "
-            "Chapter manuscripts live in Google Docs only; companion code is on GitHub.\n\n",
+            "text": (
+                "Use this document as the master index. Open any chapter from the links below. "
+                "Chapter manuscripts live in Google Docs only and are not stored on GitHub. "
+                "Companion lab code, citation ledgers, and contracts live in the GitHub repo.\n\n"
+            ),
             "kind": "body",
         }
     )
@@ -73,6 +87,10 @@ def build_segments(manifest: dict, gdoc: dict) -> list[dict]:
         f"https://docs.google.com/document/d/{manifest['proposal_doc_id']}/edit"
     )
     github_url = f"https://github.com/{manifest['github_repo']}"
+    pi_url = (
+        "https://docs.google.com/document/d/"
+        "1M29Em3yqS7fO-f3qxKZvEEYW7bQuab21UDeXPO-wa-E/edit"
+    )
     segs.append(
         {
             "text": "Packt proposal (locked outline)\n",
@@ -82,15 +100,36 @@ def build_segments(manifest: dict, gdoc: dict) -> list[dict]:
     )
     segs.append(
         {
-            "text": "GitHub companion lab (code only — not chapter prose)\n",
+            "text": "GitHub companion lab (kenhuangus/rsi-agent-lab — code only)\n",
             "kind": "link_line",
             "url": github_url,
+        }
+    )
+    segs.append(
+        {
+            "text": "Product Information (PI) Google Doc\n",
+            "kind": "link_line",
+            "url": pi_url,
         }
     )
     segs.append({"text": "\n", "kind": "body"})
 
     titles = gdoc.get("titles") or {}
     links = gdoc.get("webViewLinks") or {}
+
+    # Short lab / editorial notes keyed by chapter number (index only; outline unchanged).
+    chapter_notes = {
+        1: "Survey taxonomy; evidence ladder (task / retained / improver gain).",
+        2: "Lab: labs/ch02_ownership/ — ownership manifest + locked writes.",
+        3: "Lab: labs/ch03_proposals/ — planner/implementer + candidate_diff.",
+        4: "Lab: labs/ch04_model_surface/ — adapters + forgetting; Terminal-RSI weight-RSI notes.",
+        5: "Lab: labs/ch05_data_memory/ — experience admission + collapse/poison.",
+        6: "Lab: labs/ch06_orchestration/ — harness RSI; RRSI + Harness² Propose–Probe–Compose.",
+        7: "Lab: labs/ch07_isolation/ — sandbox profile + isolation receipts.",
+        8: "Lab: labs/ch08_measure/ — metric cards, adversary, sealed ledger; SPR / scores without strength.",
+        9: "Lab: labs/ch09_promotion/ — keep is not promote; risk-tier tokens; pacing.",
+        10: "Lab: labs/ch10_ecosystem/ — boundary broker, kill/rollback, publication gate.",
+    }
 
     for part in manifest["parts"]:
         segs.append({"text": f"Part {part['id']}: {part['title']}\n", "kind": "h2"})
@@ -109,19 +148,87 @@ def build_segments(manifest: dict, gdoc: dict) -> list[dict]:
                     "kind": "body",
                 }
             )
+            note = chapter_notes.get(ch_num)
+            if note:
+                segs.append({"text": f"  Note: {note}\n", "kind": "body"})
         segs.append({"text": "\n", "kind": "body"})
 
-    segs.append({"text": "Editorial rules (all chapters)\n", "kind": "h2"})
+    segs.append({"text": "Source integrations (outline unchanged)\n", "kind": "h2"})
     segs.append(
         {
-            "text": "Inline hyperlinked URLs only; no end-of-chapter References section. "
-            "Each distinct URL appears once per chapter. Numbers grounded in VERIFIED_FACTS.\n",
+            "text": (
+                "Recent primary sources woven into chapter Docs (Packt inline URL once per chapter; "
+                "numbers only via VERIFIED_FACTS):\n"
+            ),
             "kind": "body",
         }
     )
     segs.append(
         {
-            "text": f"Last rebuilt from {ROOT.name} manifest and GDOC_IDS.json.\n",
+            "text": "Harness² — Recursive Agent Harnessing (arXiv 2610.14224)\n",
+            "kind": "link_line",
+            "url": "https://arxiv.org/abs/2610.14224",
+        }
+    )
+    segs.append(
+        {
+            "text": "  Chapters 1 and 6; code release\n",
+            "kind": "body",
+        }
+    )
+    segs.append(
+        {
+            "text": "google-research/harness2\n",
+            "kind": "link_line",
+            "url": "https://github.com/google-research/harness2",
+        }
+    )
+    segs.append(
+        {
+            "text": "Terminal-RSI — Recursive Self-Rewrite and Policy-Refine (arXiv 2610.22192)\n",
+            "kind": "link_line",
+            "url": "https://arxiv.org/abs/2610.22192",
+        }
+    )
+    segs.append(
+        {
+            "text": "  Chapters 1, 4, and 8 (weight RSI + strict vs partial credit)\n",
+            "kind": "body",
+        }
+    )
+    segs.append(
+        {
+            "text": "Awesome RSI — curated research map\n",
+            "kind": "link_line",
+            "url": "https://github.com/lobehub/awesome-rsi",
+        }
+    )
+    segs.append(
+        {
+            "text": "  Chapter 1 further-reading map; evidence-ladder vocabulary\n\n",
+            "kind": "body",
+        }
+    )
+
+    segs.append({"text": "Editorial rules (all chapters)\n", "kind": "h2"})
+    segs.append(
+        {
+            "text": (
+                "Inline hyperlinked URLs only; no end-of-chapter References section. "
+                "Each distinct URL appears once per chapter. Numbers grounded in VERIFIED_FACTS "
+                "on GitHub. Ken reviews live Google Docs only; do not treat local manuscript/*.md "
+                "as the deliverable. Chapter outline is locked with Packt (B43540); title may be "
+                "revisited before publication.\n"
+            ),
+            "kind": "body",
+        }
+    )
+    segs.append(
+        {
+            "text": (
+                f"Last rebuilt from BOOK_MANIFEST.json + docs/GDOC_IDS.json "
+                f"(repo {manifest['github_repo']}).\n"
+            ),
             "kind": "body",
         }
     )
@@ -315,9 +422,13 @@ def main() -> int:
     toc_id = manifest.get("toc_doc_id") or gdoc["toc"]
     segments = build_segments(manifest, gdoc)
     apply_content(toc_id, segments)
-    rename_doc(toc_id, "GRSI — Master TOC (Chapters 1–10)")
+    toc_title = (gdoc.get("titles") or {}).get("toc") or (
+        "RSI for AI Agents \u2014 Master TOC (Chapters 1\u201310)"
+    )
+    rename_doc(toc_id, toc_title)
     url = gdoc["webViewLinks"].get("toc") or f"https://docs.google.com/document/d/{toc_id}/edit"
     print("Master TOC rebuilt:", toc_id)
+    print("Drive title:", toc_title)
     print(url)
     return 0
 

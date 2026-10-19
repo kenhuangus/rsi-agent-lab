@@ -1,4 +1,4 @@
-# AGENTS.md — GRSI lab companion
+# AGENTS.md — RSI lab companion
 
 ## Packt citation rules
 

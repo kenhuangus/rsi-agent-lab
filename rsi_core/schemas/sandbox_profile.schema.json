@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://grsi.lab/schemas/sandbox_profile.schema.json",
+  "$id": "https://rsi.lab/schemas/sandbox_profile.schema.json",
   "title": "SandboxProfile",
   "type": "object",
   "additionalProperties": false,

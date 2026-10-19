@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://grsi.lab/schemas/delegation_channel.schema.json",
+  "$id": "https://rsi.lab/schemas/delegation_channel.schema.json",
   "title": "DelegationChannel",
   "type": "object",
   "additionalProperties": false,

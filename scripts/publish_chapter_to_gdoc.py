@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish manuscript/chNN.md into GRSI Google Doc with Packt styling.
+"""Publish manuscript/chNN.md into RSI Google Doc with Packt styling.
 
 Inserts:
   - Real Google Docs tables (not markdown pipes)
@@ -254,6 +254,12 @@ def parse_md(text: str, chapter_num: int, chapter_title: str) -> list[dict]:
             blocks.append({"kind": kind, "text": title})
             i += 1
             continue
+        m_bullet = re.match(r"^[-*]\s+(.*)$", line)
+        if m_bullet:
+            flush_body()
+            blocks.append({"kind": "bullet", "text": strip_md_light(m_bullet.group(1).strip())})
+            i += 1
+            continue
         if line.strip() == "---":
             i += 1
             continue
@@ -428,7 +434,7 @@ def prepare_docs_png(png: Path, max_width: int = 1600) -> Path:
 def upload_png_public(png: Path) -> str:
     """Upload PNG to Drive, share as reader, return a Docs-usable URI."""
     docs_png = prepare_docs_png(png)
-    name = f"grsi-fig-{docs_png.stem}-{uuid.uuid4().hex[:8]}.png"
+    name = f"rsi-fig-{docs_png.stem}-{uuid.uuid4().hex[:8]}.png"
     meta = gws(
         "drive",
         "files",
@@ -809,6 +815,30 @@ def style_spans(doc_id: str, spans: list[tuple[str, int, int, str]]) -> None:
             )
             if text_end > start:
                 reqs.append(ts("Jost", 14, True, H_FG))
+        elif kind == "bullet":
+            reqs.append(
+                {
+                    "updateParagraphStyle": {
+                        "range": {"startIndex": start, "endIndex": para_end},
+                        "paragraphStyle": {
+                            "namedStyleType": "NORMAL_TEXT",
+                            "lineSpacing": 115,
+                            "spaceBelow": {"magnitude": 4, "unit": "PT"},
+                        },
+                        "fields": "namedStyleType,lineSpacing,spaceBelow",
+                    }
+                }
+            )
+            reqs.append(
+                {
+                    "createParagraphBullets": {
+                        "range": {"startIndex": start, "endIndex": para_end},
+                        "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE",
+                    }
+                }
+            )
+            if text_end > start:
+                reqs.append(ts("Crimson Pro", 10.5, False, BODY_FG))
         elif kind in ("body", "caption"):
             para_style = {
                 "namedStyleType": "NORMAL_TEXT",
@@ -1006,7 +1036,7 @@ def publish(chapter: int) -> None:
     ids = json.loads((ROOT / "docs" / "GDOC_IDS.json").read_text(encoding="utf-8"))
     doc_id = ids["chapters"][str(chapter)]
     title = ids.get("titles", {}).get(str(chapter), f"Chapter {chapter}")
-    opener = re.sub(r"^GRSI Ch\d+\s*[—\-]\s*", "", title).strip()
+    opener = re.sub(r"^(?:RSI\s+Ch|RSI-Ch|RSI\s+Ch)\d+\s*[—\-]\s*", "", title).strip()
     md_path = ROOT / "manuscript" / f"ch{chapter:02d}.md"
     if not md_path.exists():
         raise FileNotFoundError(md_path)

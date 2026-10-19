@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Upload manuscript/chNN.md into GRSI chapter Google Docs (replace body).
+"""Upload manuscript/chNN.md into RSI chapter Google Docs (replace body).
 
 Packt: manuscripts must already follow inline-URL-once rules.
 Auth: set GOOGLE_WORKSPACE_CLI_ACCOUNT / CONFIG_DIR (see .env.example).

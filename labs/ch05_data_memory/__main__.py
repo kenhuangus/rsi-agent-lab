@@ -27,7 +27,7 @@ def _cmd_admit(args: argparse.Namespace) -> int:
 
 
 def _cmd_broker_demo(_: argparse.Namespace) -> int:
-    with tempfile.TemporaryDirectory(prefix="grsi-ch05-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="rsi-ch05-") as tmp:
         broker = ExperienceBroker(Path(tmp), policy=AdmissionPolicy(min_quality=0.5))
         good = {
             "lineage_id": LINEAGE,

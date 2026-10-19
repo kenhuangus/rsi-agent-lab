@@ -65,7 +65,7 @@ def _sample_candidate(
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="GRSI Ch8 measure lab CLI")
+    parser = argparse.ArgumentParser(description="RSI Ch8 measure lab CLI")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     p_adv = sub.add_parser("adversary", help="Run adversary pass (refuse path)")

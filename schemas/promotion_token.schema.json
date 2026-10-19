@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://grsi.lab/schemas/promotion_token.schema.json",
+  "$id": "https://rsi.lab/schemas/promotion_token.schema.json",
   "title": "PromotionToken",
   "type": "object",
   "additionalProperties": false,

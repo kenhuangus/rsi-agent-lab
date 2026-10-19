@@ -1,4 +1,4 @@
-"""Load and validate instances against GRSI JSON Schemas."""
+"""Load and validate instances against RSI JSON Schemas."""
 
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ def _resolve_schema_dir() -> Path:
         if (candidate / "ownership_manifest.schema.json").is_file():
             return candidate
     raise FileNotFoundError(
-        "GRSI JSON schemas not found. Expected rsi_core/schemas/ or repo schemas/."
+        "RSI JSON schemas not found. Expected rsi_core/schemas/ or repo schemas/."
     )
 
 

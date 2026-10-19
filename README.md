@@ -83,7 +83,7 @@ CI runs the same suite on Python 3.11–3.13 (see `.github/workflows/ci.yml`).
 ```bash
 python -m running_lab.demo --lab
 # or after install:
-grsi-demo
+rsi-demo
 ```
 
 The lab run exercises real local gates: propose → filesystem jail → on-disk adapter SHA-256 → metric-card evaluation over fixture datasets (requires a clean isolation receipt) → HMAC-signed promotion tokens → kill/rollback. No GPU training is required; adapter artifacts are verified weight blobs plus config.

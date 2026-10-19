@@ -3,7 +3,7 @@
 **Template source:** [LLM Design Patterns, Second Edition — Chapter 8](https://docs.google.com/document/d/1VkUK66uM_JZnEs25q-CtGerdrsco16bMG3a9xdpXO7g/edit)  
 **Doc ID:** `1VkUK66uM_JZnEs25q-CtGerdrsco16bMG3a9xdpXO7g`
 
-All GRSI chapter Google Docs must match this template: same named styles, chapter opener typography, body font, and code-block treatment. Chapters live **only** in Google Docs — never push chapter prose to GitHub.
+All RSI chapter Google Docs must match this template: same named styles, chapter opener typography, body font, and code-block treatment. Chapters live **only** in Google Docs — never push chapter prose to GitHub.
 
 ## Page
 
@@ -42,7 +42,7 @@ All GRSI chapter Google Docs must match this template: same named styles, chapte
 
 Inline code in body may use Consolas or keep Crimson with backticks stripped in Docs (prefer Consolas 9 pt for short tokens).
 
-## Citation (Packt GRSI)
+## Citation (Packt RSI)
 
 - No References / Sources section
 - Hyperlinked URL on first mention only; later mentions back-reference in prose
@@ -85,6 +85,6 @@ Assets live in `figures/chNN/` (SVG + PNG). Chapter prose stays in Google Docs o
 
 ## Publisher scripts
 
-- `scripts/sync_packt_named_styles.py` — copy named styles from template onto each GRSI chapter Doc
+- `scripts/sync_packt_named_styles.py` — copy named styles from template onto each RSI chapter Doc
 - `scripts/publish_chapter_to_gdoc.py` — replace chapter body from `manuscript/chNN.md` with Packt styling (text, tables, figures)
 - `manuscript/` is **local staging only** — listed in `.gitignore`; never commit or push

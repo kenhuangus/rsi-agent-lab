@@ -23,7 +23,7 @@ def main() -> int:
     env["GIT_COMMITTER_EMAIL"] = "kenhuangus@users.noreply.github.com"
 
     MSG.write_text(
-        "Initial GRSI lab: contracts, five Packt labs, running demo, research corpus.\n\n"
+        "Initial RSI lab: contracts, five Packt labs, running demo, research corpus.\n\n"
         "Includes ownership schemas, RSI loop smoke tests, SOURCE_BRIEFS, VERIFIED_FACTS,\n"
         "and manuscript placeholders for the Packt book companion.\n",
         encoding="utf-8",

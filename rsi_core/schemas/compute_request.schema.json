@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://grsi.lab/schemas/compute_request.schema.json",
+  "$id": "https://rsi.lab/schemas/compute_request.schema.json",
   "title": "ComputeRequest",
   "type": "object",
   "additionalProperties": false,

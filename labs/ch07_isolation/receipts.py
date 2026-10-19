@@ -14,7 +14,11 @@ from uuid import uuid4
 
 
 def _lab_receipt_key() -> bytes:
-    raw = os.environ.get("GRSI_ISOLATION_HMAC_KEY", "grsi-lab-isolation-dev-key")
+    raw = (
+        os.environ.get("RSI_ISOLATION_HMAC_KEY")
+        or os.environ.get("GRSI_ISOLATION_HMAC_KEY")
+        or "rsi-lab-isolation-dev-key"
+    )
     return raw.encode("utf-8")
 
 

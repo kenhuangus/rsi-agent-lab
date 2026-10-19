@@ -25,8 +25,8 @@ dev = [
 ]
 
 [project.scripts]
-grsi-demo = "running_lab.demo:main"
-grsi-repro = "running_lab.repro:main"
+rsi-demo = "running_lab.demo:main"
+rsi-repro = "running_lab.repro:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

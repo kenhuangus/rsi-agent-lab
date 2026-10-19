@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync Packt named styles from template Doc onto all GRSI chapter Docs."""
+"""Sync Packt named styles from template Doc onto all RSI chapter Docs."""
 from __future__ import annotations
 
 import json

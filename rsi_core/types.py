@@ -1,4 +1,4 @@
-"""Shared types for GRSI lab contracts."""
+"""Shared types for RSI lab contracts."""
 
 from __future__ import annotations
 

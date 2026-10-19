@@ -11,7 +11,7 @@ from labs.ch10_ecosystem.failure_atlas import by_loop_step, load_entries
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="GRSI Ch10 ecosystem lab CLI")
+    parser = argparse.ArgumentParser(description="RSI Ch10 ecosystem lab CLI")
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("dry-run", help="Local ecosystem dry-run (no network)")
     p_atlas = sub.add_parser("atlas", help="List failure atlas entries for a loop step")

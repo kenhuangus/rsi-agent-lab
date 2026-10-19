@@ -1,4 +1,4 @@
-# GRSI chapter plan (updated) — labs, code blocks, production GitHub
+# RSI chapter plan (updated) — labs, code blocks, production GitHub
 
 **Status:** Binding editorial + repo plan (supersedes paired Lab 01–05 mapping for chapter delivery).  
 **Audience:** AI engineers, data scientists, AI/ML professionals.  

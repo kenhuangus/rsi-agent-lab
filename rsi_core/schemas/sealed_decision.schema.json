@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://grsi.lab/schemas/sealed_decision.schema.json",
+  "$id": "https://rsi.lab/schemas/sealed_decision.schema.json",
   "title": "SealedDecision",
   "type": "object",
   "additionalProperties": false,

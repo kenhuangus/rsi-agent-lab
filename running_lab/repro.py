@@ -46,7 +46,7 @@ def reproduce(
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Reproduce a sealed GRSI evaluation")
+    parser = argparse.ArgumentParser(description="Reproduce a sealed RSI evaluation")
     parser.add_argument("--sealed", type=Path, required=True, help="Path to sealed_decision JSON")
     parser.add_argument(
         "--card",

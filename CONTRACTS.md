@@ -1,4 +1,4 @@
-# CONTRACTS.md — LOCKED interfaces for GRSI running lab
+# CONTRACTS.md — LOCKED interfaces for RSI running lab
 
 > Wave 2 chapter/code agents must **not** change these contracts without Lead approval.
 > All implementations live under `rsi_core/` and lab packages that import these schemas.
