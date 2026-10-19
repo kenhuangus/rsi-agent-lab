@@ -1,5 +1,14 @@
 # AGENTS.md — RSI lab companion
 
+## Google Docs are the single source of truth (HARD)
+
+- **Deliverable = live Google Docs** listed in [`docs/GDOC_IDS.json`](docs/GDOC_IDS.json). Ken reviews Docs only.
+- `manuscript/*.md` is **local staging** (gitignored). Markdown edits are not shipped until published.
+- After any chapter prose/outline/figure/table/heading change, publish before claiming done:
+  `python scripts/publish_chapter_to_gdoc.py --ch N`
+  If H2s changed: `python scripts/build_master_toc.py`
+- Never create replacement chapter Docs. Never commit chapter prose to GitHub.
+
 ## Packt citation rules
 
 Chapter prose for this title follows [`docs/CITATION_RULES.md`](docs/CITATION_RULES.md):

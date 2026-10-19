@@ -2,7 +2,7 @@
 
 Companion repository for the Packt book **Recursive Self-Improvement for AI Agents**. Labs implement the locked interfaces in [`CONTRACTS.md`](CONTRACTS.md): ownership manifests, candidate diffs, sandboxes, sealed evaluation decisions, and promotion tokens.
 
-**Chapter manuscripts are Google Docs only** — they are not stored in this repo. Doc format matches the Packt template (Crimson Pro / Jost / Consolas); see [`docs/PACKT_FORMAT.md`](docs/PACKT_FORMAT.md). Chapter links: [`docs/GDOC_IDS.json`](docs/GDOC_IDS.json).
+**Google Docs are the single source of truth for chapter prose.** Manuscripts are not stored in this repo (`manuscript/` is local staging only and gitignored). Any chapter update must be published to the live Doc before it counts as done. Doc format matches the Packt template (Crimson Pro / Jost / Consolas); see [`docs/PACKT_FORMAT.md`](docs/PACKT_FORMAT.md). Chapter links: [`docs/GDOC_IDS.json`](docs/GDOC_IDS.json).
 
 RSI loop (lab framing): **propose → isolate → verify/measure → keep/revert → archive → promote → audit**.
 

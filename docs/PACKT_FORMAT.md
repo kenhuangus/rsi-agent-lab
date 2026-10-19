@@ -3,6 +3,8 @@
 **Template source:** [LLM Design Patterns, Second Edition — Chapter 8](https://docs.google.com/document/d/1VkUK66uM_JZnEs25q-CtGerdrsco16bMG3a9xdpXO7g/edit)  
 **Doc ID:** `1VkUK66uM_JZnEs25q-CtGerdrsco16bMG3a9xdpXO7g`
 
+**Single source of truth:** the live chapter Google Docs (IDs in `docs/GDOC_IDS.json`). Local `manuscript/*.md` is staging for the publish pipeline only — never the reviewed deliverable. A chapter change is incomplete until `scripts/publish_chapter_to_gdoc.py` has updated the matching existing Doc.
+
 All RSI chapter Google Docs must match this template: same named styles, chapter opener typography, body font, and code-block treatment. Chapters live **only** in Google Docs — never push chapter prose to GitHub.
 
 ## Page
