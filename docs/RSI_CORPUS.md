@@ -43,7 +43,13 @@ Machine-readable index of primary sources. Packt: one URL per chapter at first m
   {"id":"rag-jev","title":"rag-jev","year":2026,"url":"https://pypi.org/project/rag-jev/","claim_status":"industry-anecdote","chapters":[5,8],"narrative_fit":"Context scoring / Token ROI filter."},
   {"id":"meta-meta-reasoning","title":"Thinking Before Thinking (Meta)","year":2026,"url":"https://arxiv.org/abs/2609.38147","claim_status":"preprint","chapters":[2,3,8],"narrative_fit":"Compute manager as budgeted proposer."},
   {"id":"tang-scaling","title":"Tang Jie multi-knob scaling doctrine (via CN coverage)","year":2026,"url":"https://wallstreetcn.com/articles/3779790","claim_status":"author-claim-unverified","chapters":[1,4,8],"narrative_fit":"Post-training/agent knobs; not formal elimination laws."},
-  {"id":"tracer","title":"TRACER context retention ROI","year":2026,"url":"https://arxiv.org/pdf/2608.29363","claim_status":"preprint","chapters":[8],"narrative_fit":"Consequence-aware token compression."}
+  {"id":"tracer","title":"TRACER context retention ROI","year":2026,"url":"https://arxiv.org/pdf/2608.29363","claim_status":"preprint","chapters":[8],"narrative_fit":"Consequence-aware token compression."},
+  {"id":"harness2","title":"Harness2 Recursive Agent Harnessing for an Open World","year":2026,"url":"https://arxiv.org/abs/2610.14224","claim_status":"preprint","chapters":[1,6],"narrative_fit":"Propose-Probe-Compose task-level harness RSI; harnessing-level lesson library; frozen weights."},
+  {"id":"harness2-code","title":"google-research/harness2","year":2026,"url":"https://github.com/google-research/harness2","claim_status":"lab-account","chapters":[6],"narrative_fit":"Open-source Harness2 release; Apache-2.0 demo without model credentials."},
+  {"id":"awesome-rsi","title":"Awesome RSI curated research map","year":2026,"url":"https://github.com/lobehub/awesome-rsi","claim_status":"lab-account","chapters":[1],"narrative_fit":"Community taxonomy map; evidence ladder vocabulary; further reading only."},
+  {"id":"terminal-rsi","title":"Terminal-RSI Recursive Self-Rewrite and Policy-Refine","year":2026,"url":"https://arxiv.org/abs/2610.22192","claim_status":"preprint","chapters":[1,4,8],"narrative_fit":"Weight RSI for terminal agents; verified trajectory rewrite; SPR vs partial credit."},
+  {"id":"promptbreeder","title":"Promptbreeder self-referential prompt evolution","year":2024,"url":"https://arxiv.org/abs/2309.16797","claim_status":"peer-reviewed","chapters":[1,3],"narrative_fit":"Evolves mutation prompts; improver-of-improver precedent."},
+  {"id":"stop","title":"Self-Taught Optimizer (STOP)","year":2024,"url":"https://arxiv.org/abs/2310.02304","claim_status":"peer-reviewed","chapters":[1,3],"narrative_fit":"Scaffolding that improves the improver program."}
 ]
 ```
 

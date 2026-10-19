@@ -145,6 +145,17 @@ From [RSI harness experience research](6fafcc80-ed92-42d4-ab13-744aee2db859). RS
 | tracer-tokens | Token reduction vs keep-all | 29–46% | TRACER | preprint | https://arxiv.org/pdf/2608.29363 | 8 | 2026-10-06 |
 | tracer-static | Extra savings vs static tool-type policy | 15–18% | TRACER | preprint | https://arxiv.org/pdf/2608.29363 | 8 | 2026-10-06 |
 | tracer-loca | LOCA-bench token reduction | 18–25% | Five envs | preprint | https://arxiv.org/pdf/2608.29363 | 8 | 2026-10-06 |
+| harness2-workbuddy | WorkBuddy-Bench gain (single Harness² step) | up to 11.5 points | GLM-5 / Gemini 3.5 Flash vs base harness; frozen weights | preprint | https://arxiv.org/abs/2610.14224 | 1,6 | 2026-10-18 |
+| harness2-jobbench | JobBench gain (single Harness² step) | up to 4.5 points | Same model–harness configs | preprint | https://arxiv.org/abs/2610.14224 | 1,6 | 2026-10-18 |
+| harness2-lab | LAB partial pass-rate gain | up to 11.8 pp | Same | preprint | https://arxiv.org/abs/2610.14224 | 1,6 | 2026-10-18 |
+| terminalrsi-tb40 | Terminal-Bench 4.0 success | 19.84% | Terminal-RSI-27B after RSR/RPR stages | preprint | https://arxiv.org/abs/2610.22192 | 1,4,8 | 2026-10-18 |
+| terminalrsi-tb21 | Terminal-Bench 2.1 success | 86.52% | Same | preprint | https://arxiv.org/abs/2610.22192 | 1,4,8 | 2026-10-18 |
+| terminalrsi-tb30 | Terminal-Bench 3.0 success | 16.95% | Same | preprint | https://arxiv.org/abs/2610.22192 | 4 | 2026-10-18 |
+| terminalrsi-tbhard | Terminal-Bench Hard success | 79.00% | Same | preprint | https://arxiv.org/abs/2610.22192 | 1,4 | 2026-10-18 |
+| terminalrsi-lhtb-process | LHTB process reward | 0.21 → 0.37 | Long-Horizon-Terminal-Bench | preprint | https://arxiv.org/abs/2610.22192 | 4,8 | 2026-10-18 |
+| terminalrsi-lhtb-strict | LHTB strict completions | 0/46 → 5/46 | Same | preprint | https://arxiv.org/abs/2610.22192 | 4,8 | 2026-10-18 |
+| terminalrsi-swr100 | SWR100 success | 3.00% → 6.00% | Scientific Workflow Reconstruction set | preprint | https://arxiv.org/abs/2610.22192 | 4 | 2026-10-18 |
+| terminalrsi-fail-mass | Failure share of FDR reward mass | 50.09% → 28.72% | Offline rescoring under Success-Prioritized Reward | preprint | https://arxiv.org/abs/2610.22192 | 4,8 | 2026-10-18 |
 
 ### Peer-reviewed harness substrate (cite URL; pull table % carefully in prose)
 

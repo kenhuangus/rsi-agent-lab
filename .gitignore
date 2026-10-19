@@ -55,7 +55,12 @@ Thumbs.db
 
 # Chapter manuscripts are Google Docs only — never push prose to GitHub
 manuscript/
+**/manuscript/
+*.manuscript.md
 .git/COMMIT_MSG_TMP.txt
+
+# Local scratch / review dumps — never push
+tmp/
 # Local dump of Packt template Doc JSON (do not publish third-party chapter body)
 docs/packt_template_doc.json
 # Product Information documents are Google Docs only — never push prose to GitHub
